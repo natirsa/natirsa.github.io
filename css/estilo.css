@@ -48,6 +48,9 @@ body::before {
   border-bottom: 2px solid #caffcc;
 }
 
+.menu-button{
+  display: none;
+}
 .conteudo {
   margin: 50px 0 0;
   display: flex;
@@ -97,6 +100,10 @@ label {
   text-align: center;
   font-weight: 600;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 .button:hover {
@@ -110,6 +117,31 @@ label {
   color: #2b2b2b;
 }
 
+.button .icon{
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button .icon.github{
+  background-image: url(../imagens/github.svg);
+}
+
+.button:hover .icon.github, .button:active .icon.github{
+  background-image: url(../imagens/github_hover.svg);
+}
+
+.button .icon.linkedin{
+  background-image: url(../imagens/linkedin.svg);
+}
+
+.button:hover .icon.linkedin, .button:active .icon.linkedin{
+  background-image: url(../imagens/linkedin_hover.svg);
+}
+
 .foto {
   width: 50%;
   position: relative;
@@ -120,8 +152,6 @@ label {
   width: 80%;
   border-radius: 20px;
 }
-
-
 
 .contato label {
   font-family: "Krona one", sans-serif;
@@ -160,6 +190,8 @@ label {
 
 .email .voltar {
   margin-top: 30px;
+  display: flex;
+  max-width: 300px;
 }
 footer {
   background-color: #caffcc;
@@ -186,4 +218,100 @@ footer .logos {
 
 footer p {
   margin: 0;
+}
+
+
+@media (max-width: 996px) {
+  .principal{
+    padding: 40px 2rem;
+  }
+  .menu{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu a {
+    margin: 16px;
+  }
+  .menu-button{
+    display: none;
+  }
+  .conteudo{
+    flex-direction: column-reverse;
+  }
+
+  .conteudo > div{
+    width: 100%;
+  }
+
+  .foto{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  footer{
+    padding: 50px;
+    height: auto;
+  }
+  .footer{
+    flex-direction: column-reverse;
+  }
+  .footer .logos{
+    margin-top: 50px;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 720px) {
+  .principal{
+    padding: 20px 0;
+  }
+  p{
+    font-size: 20px;
+  }
+  header{
+    position: relative;
+    padding: 0 0 1rem;
+  }
+  .menu-button{
+    display: block;
+    float: right;
+    width: 44px;
+    height: 40px;
+    background: url(../imagens/Frame.svg);
+    border: none;
+    z-index: 5;
+    margin-right: 2rem;
+  }
+  .menu-button.open{
+    background: url(../imagens/Close.svg);
+  }
+  .menu{
+    display: none;
+  }
+  .menu.open{
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(43, 43, 43, 0.95);
+    border-bottom: 4px solid #caffcc;
+  }
+  .conteudo{
+    padding: 0 2rem;
+  }
+  .conteudo > div{
+    margin: 10px 0;
+  }
+  .redes{
+    margin: 0 10px;
+  }
+
+  .contato label{
+    font-size: 20px;
+  }
 }

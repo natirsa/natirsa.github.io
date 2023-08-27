@@ -12,21 +12,23 @@
 <body>
     <div class="principal">
         <header > 
-            <nav class="menu">
-                <a href="./index.html" class="active">Home</a>
-                <a href="./sobre.html">Sobre mim</a>
-                <a href="./habilidades.html">Habilidades</a>
-                <a href="./contato.html">Contato</a>
+            <button class="menu-button" id="menu-button" onclick="menuAction()"></button>
+            <nav class="menu" id="menu">
+                <a href="./index.html" class="active" onclick="menuAction()">Home</a>
+                <a href="./sobre.html" onclick="menuAction()">Sobre mim</a>
+                <a href="./habilidades.html" onclick="menuAction()">Habilidades</a>
+                <a href="./contato.html" onclick="menuAction()">Contato</a>
             </nav>   
         </header>
         <main class="conteudo">
             <div class="sobre">
                 <h1>Natalia <span>Rodrigues</span></h1>
-                <p>Olá, Sou Natalia Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quibusdam sed sit nihil corrupti adipisci libero et. Incidunt sapiente rem perferendis repellendus, a laboriosam harum autem minima, mollitia placeat sint.</p>
+                <p>Este site foi pensado de acordo com a proposta do Programa de Aceleração de Carreiras em TI do Senac São Paulo em parceria com a Alura.</p>
+                <p>Conheça mais sobre mim no meu perfil do LinkedIn e conheça meu projeto acessando o GitHub.</p>
                 <div class="redes">
                     <h2>Acesse minhas redes:</h2>
-                    <a href="" class="button">Github</a>
-                    <a href="" class="button">Linkedin</a>
+                    <a href="https://github.com/natirsa/" class="button"><span class="icon github"></span>Github</a>
+                    <a href="" class="button"><span class="icon linkedin"></span>Linkedin</a>
                 </div>
             </div>
             <div class="foto">
@@ -44,5 +46,6 @@
 
         </div>
     </footer>
+    <script src="./scripts.js"></script>
 </body>
 </html>
